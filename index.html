@@ -7,6 +7,23 @@
     <title>Jest Test</title>
 </head>
 <body>
+    <div style="display:flex;">
+        <h1>Compatibility with :</h1>
+        <input type="text" id="comparator">
+    </div>
+    <label for="fn">Choose the first hero name :</label>
+    <select name="fn" id="fn" class="hero-name-options">
+        <option selected value="">--Please choose fn--</option>
+    </select>
+
+    <label for="sn">Choose the second hero name:</label>
+    <select name="sn" id="sn" class="hero-name-options">
+        <option selected value="">--Please choose sn--</option>
+    </select>
+
+    <button id="runAlgo">Run Algo</button>
+<script src="./hero.js"></script>
 <script src="./script.js"></script>
+<script src="./submit.js" type="module"></script>
 </body>
 </html>

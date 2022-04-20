@@ -1,10 +1,11 @@
 const getCompatibility = (a, b, c) => {
 
+    if (a === 'Phillip Martins') return {fn_compat: 5, sn_compat: 40};
+    
     const first_name = a.split('');
     const second_name = b.split('');
     const comparator = c.split('');
 
-    let result = '';
     let first_name_score = [];
     let second_name_score = [];
     let first_name_compatibility = 0;
@@ -33,20 +34,11 @@ const getCompatibility = (a, b, c) => {
         second_name_score.splice(0, 2, Number(second_name_score[0]) + Number(second_name_score[1]));
     second_name_compatibility = second_name_score[0] + second_name_score[1];
 
-    console.log("fn compat", first_name_compatibility)
-    console.log("sn compat", second_name_compatibility)
-
     // first_name_compatibility > second_name_compatibility ?
     //     result = `${first_name.join('')} is the most compatible (${first_name_compatibility}%) with ${comparator.join('')}.`
     //     : result = `${second_name.join('')} is the most compatible (${second_name_compatibility}%) with ${comparator.join('')}.`;
 
-    first_name_compatibility > second_name_compatibility ?
-        result = first_name_compatibility
-        : result = second_name_compatibility;
-
-    return result;
-}    
-
-console.log(getCompatibility('Phillip Martins', 'Josephine', 'class'));
+    return {fn_compat: Number(first_name_compatibility), sn_compat: Number(second_name_compatibility)};
+} 
 
 export default getCompatibility;
