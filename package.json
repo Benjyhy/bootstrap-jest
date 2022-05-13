@@ -1,18 +1,26 @@
 {
-  "name": "tdd_bootstrap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
-  "dependencies": {
-    "jest": "^27.5.1"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.16.11"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "type": "module",
-  "author": "",
-  "license": "ISC"
+    "name": "tdd_bootstrap",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "dependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/node": "^7.16.8",
+        "@babel/plugin-transform-runtime": "^7.17.0",
+        "babel-jest": "^27.5.1",
+        "http-server": "^14.1.0",
+        "jest": "^27.5.1",
+        "node-fetch": "^3.2.3",
+        "whatwg-fetch": "^3.6.2"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+        "@babel/preset-env": "^7.16.11"
+    },
+    "type": "module",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC"
 }

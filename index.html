@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jest Test</title>
-</head>
-<body>
-    <div style="display:flex;">
-        <h1>Compatibility with :</h1>
-        <input type="text" id="comparator">
-    </div>
-    <label for="fn">Choose the first hero name :</label>
-    <select name="fn" id="fn" class="hero-name-options">
-        <option selected value="">--Please choose fn--</option>
-    </select>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jest Test</title>
+    </head>
+    <body>
+        <div style="display: flex">
+            <h1>Compatibility with :</h1>
+            <input type="text" id="comparator" />
+        </div>
+        <label for="fn">Choose the first hero name :</label>
+        <select name="fn" id="fn" class="hero-name-options">
+            <option value="0">--Please choose fn--</option>
+        </select>
 
-    <label for="sn">Choose the second hero name:</label>
-    <select name="sn" id="sn" class="hero-name-options">
-        <option selected value="">--Please choose sn--</option>
-    </select>
+        <label for="sn">Choose the second hero name :</label>
+        <select name="sn" id="sn" class="hero-name-options">
+            <option value="0">--Please choose sn--</option>
+        </select>
 
-    <button id="runAlgo">Run Algo</button>
-<script src="./hero.js"></script>
-<script src="./script.js"></script>
-<script src="./submit.js" type="module"></script>
-</body>
+        <button id="runAlgo">Run Algo</button>
+
+        <p>First Name Compatibility&nbsp;: <span id="result_fn"></span>%</p>
+        <p>Second Name Compatibility&nbsp;: <span id="result_sn"></span>%</p>
+        <script src="hero.js" type="module"></script>
+        <script src="main.js" type="module"></script>
+        <script src="script.js" type="module"></script>
+        <script src="submit.js" type="module"></script>
+        <!-- <script>
+            const btn = document.getElementById("runAlgo");
+            const fn_select = document.getElementById("fn");
+            const sn_select = document.getElementById("sn");
+            const comparator = document.getElementById("comparator");
+            btn.addEventListener("click", () => {
+                console.log(fn_select.value, sn_select.value, comparator.value);
+                console.log(
+                    getCompatibility(
+                        fn_select.value,
+                        sn_select.value,
+                        comparator.value
+                    )
+                );
+            });
+        </script> -->
+    </body>
 </html>
